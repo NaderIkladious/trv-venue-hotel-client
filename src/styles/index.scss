@@ -1,2 +1,9 @@
 @import 'normalize';
+@import 'utils';
 @import 'header';
+@import 'landing';
+@import 'hotelItem';
+
+body {
+  background: #fafafa;
+}

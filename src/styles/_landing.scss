@@ -1,0 +1,25 @@
+.landing {
+  .landing-search {
+    display: flex;
+    margin: 0 -1rem;
+
+    .landing-search-filters {
+      padding: 1rem;
+      width: 17rem;
+
+      form {
+        margin-top: 1rem;
+      }
+    }
+
+    .landing-search-result {
+      flex-grow: 1;
+      padding: 1rem;
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    }
+  }
+}
