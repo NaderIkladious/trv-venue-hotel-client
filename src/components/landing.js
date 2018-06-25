@@ -42,7 +42,6 @@ export default class Landing extends React.Component {
         (distance_to_venue && hotel.distance_to_venue <= distance_to_venue)
       );
     });
-    console.log(result);
     return result;
   }
 
