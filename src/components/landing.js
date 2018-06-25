@@ -6,9 +6,9 @@ import * as _ from 'lodash';
 
 export const DEFAULT_FILTERS_CONTEXT = {
   filters: {
-    price_category: '',
+    price_category: 'low',
     distance_to_venue: 10000,
-    amenities: []
+    amenities: ['free_wifi']
   }
 };
 export const LandingContext = React.createContext(DEFAULT_FILTERS_CONTEXT);
@@ -36,12 +36,13 @@ export default class Landing extends React.Component {
     const { price_category, distance_to_venue, amenities } = this.state.filters;
 
     const result = _.filter(this.state.hotels, hotel => {
-      return price_category && price_category.length
-        ? hotel.price_category === price_category
-        : true && amenities
-          ? _.intersection(hotel.amenities, amenities).length === amenities.length
-          : true && distance_to_venue ? hotel.distance_to_venue <= distance_to_venue : true;
+      return (
+        (price_category && price_category.length ? hotel.price_category === price_category : true) &&
+        (amenities && _.intersection(hotel.amenities, amenities).length === amenities.length) &&
+        (distance_to_venue && hotel.distance_to_venue <= distance_to_venue)
+      );
     });
+    console.log(result);
     return result;
   }
 
