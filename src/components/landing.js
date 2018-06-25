@@ -1,11 +1,26 @@
 import React from 'react';
 import axios from 'axios';
 import HotelItem from './hotel-item';
+import Filters from './filters';
+import * as _ from 'lodash';
+
+export const DEFAULT_FILTERS_CONTEXT = {
+  filters: {
+    price_category: '',
+    distance_to_venue: 10000,
+    amenities: []
+  }
+};
+export const LandingContext = React.createContext(DEFAULT_FILTERS_CONTEXT);
 
 export default class Landing extends React.Component {
   state = {
     hotels: [],
-    loading: true
+    loading: true,
+    ...DEFAULT_FILTERS_CONTEXT,
+    update: state => {
+      this.setState(state);
+    }
   };
 
   componentDidMount() {
@@ -17,74 +32,44 @@ export default class Landing extends React.Component {
     });
   }
 
+  filteredHotels() {
+    const { price_category, distance_to_venue, amenities } = this.state.filters;
+
+    const result = _.filter(this.state.hotels, hotel => {
+      return price_category && price_category.length
+        ? hotel.price_category === price_category
+        : true && amenities
+          ? _.intersection(hotel.amenities, amenities).length === amenities.length
+          : true && distance_to_venue ? hotel.distance_to_venue <= distance_to_venue : true;
+    });
+    return result;
+  }
+
   render() {
     return (
-      <div className="landing">
-        <div className="wrapper">
-          <h2>Recommended Hotels</h2>
-          <div className="landing-search">
-            <div className="landing-search-result">
-              {this.state.loading ? (
-                <p>Loading...</p>
-              ) : (
-                <ul>
-                  {this.state.hotels.map(hotel => (
-                    <li key={hotel.id}>
-                      <HotelItem hotel={hotel} />
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-            <div className="landing-search-filters">
-              <form>
-                <select>
-                  <option value="">Choose Price Category</option>
-                  <option value="low">Low</option>
-                  <option value="medium">Medium</option>
-                  <option value="high">High</option>
-                </select>
-                <div>
-                  <label for="distance">Distance from Venue</label>
-                  <br />
-                  <input type="range" id="distance" name="distance" min="0" max="100" step="2" />
-                </div>
-                <div>
-                  <label>Amenities</label>
-                  <div>
-                    <input type="checkbox" id="free_wifi" name="free_wifi" value="free_wifi" />
-                    <label for="free_wifi">Free Wifi</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="free_parking" name="free_parking" value="free_parking" />
-                    <label for="free_parking">Free Parking</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="pets" name="pets" value="pets" />
-                    <label for="pets">Pets</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="restaurant" name="restaurant" value="restaurant" />
-                    <label for="restaurant">Restaurant</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="gym" name="gym" value="gym" />
-                    <label for="gym">Gym</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="pool" name="pool" value="pool" />
-                    <label for="pool">Pool</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="spa" name="spa" value="spa" />
-                    <label for="spa">Spa</label>
-                  </div>
-                </div>
-              </form>
+      <LandingContext.Provider value={this.state}>
+        <div className="landing">
+          <div className="wrapper">
+            <h2>Recommended Hotels</h2>
+            <div className="landing-search">
+              <div className="landing-search-result">
+                {this.state.loading ? (
+                  <p>Loading...</p>
+                ) : (
+                  <ul>
+                    {this.filteredHotels().map(hotel => (
+                      <li key={hotel.id}>
+                        <HotelItem hotel={hotel} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              <Filters />
             </div>
           </div>
         </div>
-      </div>
+      </LandingContext.Provider>
     );
   }
 }
