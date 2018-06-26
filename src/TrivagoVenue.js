@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './components/header';
-import Landing from './components/landing';
-import Confirmation from './components/confirmation';
-import Hotel from './components/hotel';
+import Landing from './containers/landing';
+import Confirmation from './containers/confirmation';
+import Hotel from './containers/hotel';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class TrivagoVenue extends React.Component {

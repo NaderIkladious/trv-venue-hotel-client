@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import HotelItem from './hotel-item';
-import Filters from './filters';
+import HotelItem from '../components/hotel-item';
+import Filters from '../components/filters';
 import * as _ from 'lodash';
 
 export const DEFAULT_FILTERS_CONTEXT = {

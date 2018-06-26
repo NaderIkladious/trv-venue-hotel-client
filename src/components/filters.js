@@ -1,5 +1,5 @@
 import React from 'react';
-import { LandingContext, DEFAULT_FILTERS_CONTEXT } from './landing';
+import { LandingContext, DEFAULT_FILTERS_CONTEXT } from '../containers/landing';
 import * as _ from 'lodash';
 
 export default class Filters extends React.Component {
