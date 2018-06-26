@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import uuidv4 from 'uuid';
 
 export default class Hotel extends React.Component {
   state = {
@@ -47,6 +49,14 @@ export default class Hotel extends React.Component {
                       <p>{room.description}</p>
                       <p>{room.max_occupancy}</p>
                       <p>${room.price_in_usd.toPrecision(5)}</p>
+                      <Link
+                        to={{
+                          pathname: `/confirmation/${uuidv4()}`,
+                          state: { room, hotel: this.state.hotel }
+                        }}
+                      >
+                        Reserve
+                      </Link>
                     </li>
                   ))}
                 </ul>
