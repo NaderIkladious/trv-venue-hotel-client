@@ -6,7 +6,7 @@ import * as _ from 'lodash';
 
 export const DEFAULT_FILTERS_CONTEXT = {
   filters: {
-    price_category: 'low',
+    price_category: '',
     distance_to_venue: 10000,
     amenities: ['free_wifi']
   }
