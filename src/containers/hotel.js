@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import uuidv4 from 'uuid';
+import { SVGIconText } from '../components/SVGIcon';
+import Rating from '../components/rating';
 
 export default class Hotel extends React.Component {
   state = {
@@ -32,12 +34,24 @@ export default class Hotel extends React.Component {
           <div className="wrapper">
             <div className="hotel-name">
               <h2>{this.state.hotel.name}</h2>
-              <p>{this.state.hotel.rating}</p>
+              <Rating rate={this.state.hotel.rating} />
             </div>
           </div>
         </div>
         <div className="hotel-page-body wrapper">
           <div className="hotel-page-details">
+            <h4>Amenities</h4>
+            <ul className="amenities">
+              {this.state.hotel.amenities ? (
+                this.state.hotel.amenities.map(item => (
+                  <li key={item}>
+                    <SVGIconText text={item.replace('_', ' ')} name={item.toUpperCase()} width="1.4rem" />
+                  </li>
+                ))
+              ) : (
+                <p> No Amenities </p>
+              )}
+            </ul>
             <h4>Description</h4>
             <p>{this.state.hotel.description}</p>
             <div className="hotel-page-rooms">

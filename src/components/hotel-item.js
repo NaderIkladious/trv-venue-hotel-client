@@ -11,7 +11,7 @@ export default class HotelItem extends React.Component {
           <div className="hotel-item-details">
             <h4>{this.props.hotel.name}</h4>
             <Rating rate={this.props.hotel.rating.toPrecision(2)} />
-            <ul>
+            <ul className="amenities">
               {this.props.hotel.amenities ? (
                 this.props.hotel.amenities.map(item => (
                   <li key={item}>
