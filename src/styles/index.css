@@ -306,8 +306,15 @@ template {
 
 .header {
   background-color: white;
-  box-shadow: 0 -4px 29px 0 rgba(0, 0, 0, 0.75);
-  height: 6rem; }
+  box-shadow: 0 -4px 29px 0 rgba(173, 173, 173, 0.45);
+  height: 6rem;
+  box-sizing: border-box;
+  padding-top: 12px;
+  background: #d2f2ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
 
 .landing .landing-search {
   display: flex;
@@ -355,4 +362,5 @@ template {
       text-transform: capitalize; }
 
 body {
-  background: #fafafa; }
+  background: #fafafa;
+  margin-top: 7rem; }
