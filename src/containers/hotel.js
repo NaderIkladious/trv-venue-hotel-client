@@ -41,10 +41,12 @@ export default class Hotel extends React.Component {
               <div className="placeholder" style={{ width: '15rem', height: '10rem' }} />
             )}
           </div>
-          <div className="wrapper">
-            <div className="hotel-name">
-              <h2>{this.state.hotel.name}</h2>
-              <Rating rate={this.state.hotel.rating} />
+          <div className="hotel-page-header-text">
+            <div className="wrapper">
+              <div className="hotel-name">
+                <h2>{this.state.hotel.name}</h2>
+                <Rating width="1.5rem" rate={this.state.hotel.rating} />
+              </div>
             </div>
           </div>
         </div>

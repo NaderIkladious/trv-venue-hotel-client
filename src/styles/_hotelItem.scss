@@ -18,47 +18,15 @@
       width: 15rem;
       height: 10rem;
       margin-right: 1.3rem;
-      img {
-        height: auto;
+      position: relative;
+      .img {
+        position: relative;
         width: 15rem;
-        max-width: 500px;
-        min-height: 10rem;
+        height: 10rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
-      .slider-control-centerleft,
-      .slider-control-centerright,
-      .slider-control-bottomcenter {
-        transition: opacity 0.3s ease;
-      }
-      &:not(:hover) {
-        .slider-control-centerleft,
-        .slider-control-centerright,
-        .slider-control-bottomcenter {
-          opacity: 0;
-        }
-      }
-    }
-  }
-}
-
-.rating {
-  padding: 0;
-  list-style: none;
-  margin: 0.3rem 0;
-  li {
-    display: inline-block;
-  }
-}
-
-.amenities {
-  padding: 0;
-  list-style: none;
-  li {
-    display: inline-block;
-    margin-right: 1.5rem;
-    margin-top: 0.5rem;
-    span {
-      margin-left: 0.6rem;
-      text-transform: capitalize;
     }
   }
 }

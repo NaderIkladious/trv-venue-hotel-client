@@ -1,5 +1,34 @@
-.hotel {
-  .carousel {
-    height: 25rem;
+.hotel-page {
+  .hotel-page-header {
+    position: relative;
+
+    .carousel {
+      height: 25rem;
+
+      .img {
+        width: 100%;
+        height: 25rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .hotel-page-header-text {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+      color: white;
+      pointer-events: none;
+      .hotel-name {
+        padding: 1rem 0;
+        h2 {
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
   }
 }

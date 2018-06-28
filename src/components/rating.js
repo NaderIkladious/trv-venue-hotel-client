@@ -10,7 +10,7 @@ const Rating = props => {
     }
     arr.push(
       <li className="list-inline-item" key={i}>
-        <SVGIcon name={name} fill={props.color} />
+        <SVGIcon width={props.width} name={name} fill={props.color} />
       </li>
     );
   }

@@ -304,6 +304,34 @@ template {
 .d-flex {
   display: flex; }
 
+.rating {
+  padding: 0;
+  list-style: none;
+  margin: 0.3rem 0; }
+  .rating li {
+    display: inline-block; }
+
+.amenities {
+  padding: 0;
+  list-style: none; }
+  .amenities li {
+    display: inline-block;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem; }
+    .amenities li span {
+      margin-left: 0.6rem;
+      text-transform: capitalize; }
+
+div .slider-control-centerleft,
+div .slider-control-centerright,
+div .slider-control-bottomcenter {
+  transition: opacity 0.3s ease; }
+
+div:not(:hover) .slider-control-centerleft,
+div:not(:hover) .slider-control-centerright,
+div:not(:hover) .slider-control-bottomcenter {
+  opacity: 0; }
+
 .header {
   background-color: white;
   box-shadow: 0 -4px 29px 0 rgba(173, 173, 173, 0.45);
@@ -332,6 +360,30 @@ template {
       list-style: none;
       padding: 0; }
 
+.hotel-page .hotel-page-header {
+  position: relative; }
+  .hotel-page .hotel-page-header .carousel {
+    height: 25rem; }
+    .hotel-page .hotel-page-header .carousel .img {
+      width: 100%;
+      height: 25rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .hotel-page .hotel-page-header .hotel-page-header-text {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    background: black;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    pointer-events: none; }
+    .hotel-page .hotel-page-header .hotel-page-header-text .hotel-name {
+      padding: 1rem 0; }
+      .hotel-page .hotel-page-header .hotel-page-header-text .hotel-name h2 {
+        margin-bottom: 0.4rem; }
+
 .hotel-item {
   border: 1px solid #eee;
   border-radius: 3px;
@@ -349,39 +401,16 @@ template {
     .hotel-item .hotel-item-details .hotel-item-carousel {
       width: 15rem;
       height: 10rem;
-      margin-right: 1.3rem; }
-      .hotel-item .hotel-item-details .hotel-item-carousel img {
-        height: auto;
+      margin-right: 1.3rem;
+      position: relative; }
+      .hotel-item .hotel-item-details .hotel-item-carousel .img {
+        position: relative;
         width: 15rem;
-        max-width: 500px;
-        min-height: 10rem; }
-      .hotel-item .hotel-item-details .hotel-item-carousel .slider-control-centerleft,
-      .hotel-item .hotel-item-details .hotel-item-carousel .slider-control-centerright,
-      .hotel-item .hotel-item-details .hotel-item-carousel .slider-control-bottomcenter {
-        transition: opacity 0.3s ease; }
-      .hotel-item .hotel-item-details .hotel-item-carousel:not(:hover) .slider-control-centerleft,
-      .hotel-item .hotel-item-details .hotel-item-carousel:not(:hover) .slider-control-centerright,
-      .hotel-item .hotel-item-details .hotel-item-carousel:not(:hover) .slider-control-bottomcenter {
-        opacity: 0; }
-
-.rating {
-  padding: 0;
-  list-style: none;
-  margin: 0.3rem 0; }
-  .rating li {
-    display: inline-block; }
-
-.amenities {
-  padding: 0;
-  list-style: none; }
-  .amenities li {
-    display: inline-block;
-    margin-right: 1.5rem;
-    margin-top: 0.5rem; }
-    .amenities li span {
-      margin-left: 0.6rem;
-      text-transform: capitalize; }
+        height: 10rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
 
 body {
   background: #fafafa;
-  margin-top: 7rem; }
+  margin-top: 6rem; }

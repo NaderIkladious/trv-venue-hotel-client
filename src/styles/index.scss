@@ -1,10 +1,12 @@
 @import 'normalize';
 @import 'utils';
+@import 'carousel';
 @import 'header';
 @import 'landing';
+@import 'hotel';
 @import 'hotelItem';
 
 body {
   background: #fafafa;
-  margin-top: 7rem;
+  margin-top: 6rem;
 }

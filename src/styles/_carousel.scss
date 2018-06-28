@@ -1,0 +1,14 @@
+div {
+  .slider-control-centerleft,
+  .slider-control-centerright,
+  .slider-control-bottomcenter {
+    transition: opacity 0.3s ease;
+  }
+  &:not(:hover) {
+    .slider-control-centerleft,
+    .slider-control-centerright,
+    .slider-control-bottomcenter {
+      opacity: 0;
+    }
+  }
+}
