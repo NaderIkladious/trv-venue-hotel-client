@@ -12,7 +12,7 @@ export default class HotelItem extends React.Component {
         <Link to={`/hotels/${this.props.hotel.id}`}>
           <div className="hotel-item-details">
             <div className="hotel-item-carousel">
-              {this.props.hotel.imagesId.length ? (
+              {this.props.hotel.imagesId && this.props.hotel.imagesId.length ? (
                 <Carousel>
                   {this.props.hotel.imagesId.map(imageId => <Img key={imageId} type="hotels" imageId={imageId} />)}
                 </Carousel>

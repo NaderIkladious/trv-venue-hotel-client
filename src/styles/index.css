@@ -353,6 +353,17 @@ template {
       color: #d93732;
       border-color: #d93732; }
 
+@keyframes pulse {
+  0% {
+    background-color: rgba(165, 165, 165, 0.1); }
+  50% {
+    background-color: rgba(165, 165, 165, 0.3); }
+  100% {
+    background-color: rgba(165, 165, 165, 0.1); } }
+
+.placeholder {
+  animation: pulse 1s infinite; }
+
 div .slider-control-centerleft,
 div .slider-control-centerright,
 div .slider-control-bottomcenter {
@@ -527,6 +538,39 @@ div:not(:hover) .slider-control-bottomcenter {
         display: inline-block;
         padding: 5px 15px;
         margin: 1rem auto 0; }
+
+.trivago-admin {
+  display: flex; }
+  .trivago-admin .admin-navigation {
+    list-style: none;
+    width: 25%;
+    padding: 0;
+    margin: 0; }
+    .trivago-admin .admin-navigation li {
+      display: block;
+      margin: 15px 0; }
+      .trivago-admin .admin-navigation li a {
+        display: block;
+        padding: 15px;
+        background-color: white;
+        text-decoration: none;
+        color: #333;
+        background: #eee; }
+        .trivago-admin .admin-navigation li a.selected {
+          background: white; }
+      .trivago-admin .admin-navigation li:first-child {
+        margin-top: 0; }
+  .trivago-admin .admin-view {
+    padding: 20px;
+    background-color: white;
+    flex-grow: 1; }
+
+.admin-hotels ul {
+  list-style: none; }
+  .admin-hotels ul h4 {
+    display: inline-block; }
+  .admin-hotels ul .badge {
+    cursor: pointer; }
 
 body {
   background: #fafafa;

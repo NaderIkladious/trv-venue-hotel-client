@@ -49,7 +49,7 @@ export default class Hotel extends React.Component {
                 {this.state.hotel.imagesId.map(imageId => <Img key={imageId} type="hotels" imageId={imageId} />)}
               </Carousel>
             ) : (
-              <div className="placeholder" style={{ width: '15rem', height: '10rem' }} />
+              <div className="placeholder" style={{ width: '100%', height: '100%' }} />
             )}
           </div>
           <div className="hotel-page-header-text">

@@ -1,0 +1,32 @@
+.trivago-admin {
+  display: flex;
+  .admin-navigation {
+    list-style: none;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    li {
+      display: block;
+      margin: 15px 0;
+      a {
+        display: block;
+        padding: 15px;
+        background-color: white;
+        text-decoration: none;
+        color: #333;
+        background: #eee;
+        &.selected {
+          background: white;
+        }
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .admin-view {
+    padding: 20px;
+    background-color: white;
+    flex-grow: 1;
+  }
+}
