@@ -336,6 +336,9 @@ template {
     background-color: #fe7f2d; }
   .badge.badge-high {
     background-color: #d93732; }
+  .badge.badge-occupancy {
+    background-color: #1280ab;
+    padding: 4px 9px !important; }
   .badge.badge-border {
     background-color: transparent;
     border-style: solid;
@@ -359,6 +362,9 @@ div:not(:hover) .slider-control-centerleft,
 div:not(:hover) .slider-control-centerright,
 div:not(:hover) .slider-control-bottomcenter {
   opacity: 0; }
+
+.slider-control-bottomcenter ul li button {
+  padding: 3px !important; }
 
 .header {
   background-color: white;
@@ -455,6 +461,52 @@ div:not(:hover) .slider-control-bottomcenter {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; }
+
+.room-list {
+  padding: 0;
+  list-style: none; }
+
+.room-item {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden; }
+  .room-item .room-item-details {
+    display: flex; }
+    .room-item .room-item-details h4 {
+      font-size: 1.4rem;
+      margin: 0.7rem 0 0 0; }
+    .room-item .room-item-details p {
+      margin: 0.5rem 0; }
+    .room-item .room-item-details .room-item-carousel {
+      width: 15rem;
+      height: 10rem;
+      margin-right: 1.3rem;
+      position: relative; }
+      .room-item .room-item-details .room-item-carousel .img {
+        position: relative;
+        width: 15rem;
+        height: 10rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+    .room-item .room-item-details .room-item-info {
+      width: 80%; }
+    .room-item .room-item-details .room-item-reserve {
+      width: 15rem;
+      padding: 1rem;
+      text-align: center; }
+      .room-item .room-item-details .room-item-reserve .room-price {
+        font-size: 1.8rem;
+        margin-top: 1.5rem; }
+      .room-item .room-item-details .room-item-reserve .room-reserve {
+        text-transform: capitalize;
+        font-size: 1rem;
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 15px;
+        margin: 1rem auto 0; }
 
 body {
   background: #fafafa;

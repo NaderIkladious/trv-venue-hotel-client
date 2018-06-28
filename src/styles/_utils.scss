@@ -49,6 +49,10 @@
   &.badge-high {
     background-color: #d93732;
   }
+  &.badge-occupancy {
+    background-color: #1280ab;
+    padding: 4px 9px !important;
+  }
 
   &.badge-border {
     background-color: transparent;

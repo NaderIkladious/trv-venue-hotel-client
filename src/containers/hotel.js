@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import uuidv4 from 'uuid';
 import Carousel from 'nuka-carousel';
 import { SVGIconText } from '../components/SVGIcon';
 import Rating from '../components/rating';
 import Img from '../components/img';
+import Room from '../components/room';
 
 export default class Hotel extends React.Component {
   state = {
@@ -71,21 +71,10 @@ export default class Hotel extends React.Component {
             <p>{this.state.hotel.description}</p>
             <div className="hotel-page-rooms">
               {this.state.rooms ? (
-                <ul>
+                <ul className="room-list">
                   {this.state.rooms.map(room => (
                     <li key={room.id}>
-                      <p>{room.name}</p>
-                      <p>{room.description}</p>
-                      <p>{room.max_occupancy}</p>
-                      <p>${room.price_in_usd.toPrecision(5)}</p>
-                      <Link
-                        to={{
-                          pathname: `/confirmation/${uuidv4()}`,
-                          state: { room, hotel: this.state.hotel }
-                        }}
-                      >
-                        Reserve
-                      </Link>
+                      <Room room={room} hotel={this.state.hotel} />
                     </li>
                   ))}
                 </ul>
