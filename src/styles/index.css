@@ -336,6 +336,19 @@ template {
     background-color: #fe7f2d; }
   .badge.badge-high {
     background-color: #d93732; }
+  .badge.badge-border {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px; }
+    .badge.badge-border.badge-low {
+      color: #007f33;
+      border-color: #007f33; }
+    .badge.badge-border.badge-medium {
+      color: #fe7f2d;
+      border-color: #fe7f2d; }
+    .badge.badge-border.badge-high {
+      color: #d93732;
+      border-color: #d93732; }
 
 div .slider-control-centerleft,
 div .slider-control-centerright,

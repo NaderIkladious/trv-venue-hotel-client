@@ -46,6 +46,9 @@ export default class Hotel extends React.Component {
               <div className="hotel-name">
                 <h2>{this.state.hotel.name}</h2>
                 <Rating width="1.5rem" rate={this.state.hotel.rating} />
+                <span className={`badge badge-border badge-${this.state.hotel.price_category}`}>
+                  {this.state.hotel.price_category}
+                </span>
               </div>
             </div>
           </div>
