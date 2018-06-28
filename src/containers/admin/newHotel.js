@@ -40,27 +40,33 @@ export default class NewHotel extends React.Component {
     return (
       <div className="new-hotel">
         <form>
-          <input
-            type="text"
-            placeholder="Hotel Name"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-          <textarea
-            placeholder="Hotel Description"
-            name="description"
-            value={this.state.description}
-            onChange={this.handleChange}
-          />
-          <select value={this.state.price_category} required onChange={this.handleChange} name="price_category">
-            <option value="">Choose Price Category</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
+          <div className="form-element">
+            <input
+              type="text"
+              placeholder="Hotel Name"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-element">
+            <textarea
+              placeholder="Hotel Description"
+              name="description"
+              value={this.state.description}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-element">
+            <select value={this.state.price_category} required onChange={this.handleChange} name="price_category">
+              <option value="">Choose Price Category</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
           <div>
-            <label>Distance > {this.state.distance_to_venue}</label>
+            <label>Distance: {this.state.distance_to_venue}</label>
             <br />
             <input
               type="range"
@@ -153,7 +159,9 @@ export default class NewHotel extends React.Component {
               <label htmlFor="spa">Spa</label>
             </div>
           </div>
-          <button onClick={this.handleSubmit}>Submit</button>
+          <div className="form-element center">
+            <button onClick={this.handleSubmit}>Submit</button>
+          </div>
         </form>
       </div>
     );

@@ -39,13 +39,15 @@ export default class Filters extends React.Component {
         {context => (
           <div className="landing-search-filters">
             <form>
-              <select value={this.state.filters.price_category} onChange={this.handleChange} name="price_category">
-                <option value="">Choose Price Category</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-              </select>
-              <div>
+              <div className="form-element">
+                <select value={this.state.filters.price_category} onChange={this.handleChange} name="price_category">
+                  <option value="">Choose Price Category</option>
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                </select>
+              </div>
+              <div className="form-element">
                 <label>Distance > {this.state.filters.distance_to_venue}</label>
                 <br />
                 <input

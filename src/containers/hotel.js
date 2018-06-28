@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 import * as _ from 'lodash';
 import { SVGIconText } from '../components/SVGIcon';
@@ -94,8 +93,8 @@ export default class Hotel extends React.Component {
               )}
             </div>
             {this.state.sample ? (
-              <div class="load-more">
-                <span className="button badge" onClick={this.loadMore}>
+              <div className="load-more">
+                <span className="button" onClick={this.loadMore}>
                   Load More
                 </span>
               </div>

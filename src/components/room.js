@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import uuidv4 from 'uuid';
 import Carousel from 'nuka-carousel';
-import { SVGIconText } from './SVGIcon';
 import Img from './img';
 
 export default class HotelItem extends React.Component {
