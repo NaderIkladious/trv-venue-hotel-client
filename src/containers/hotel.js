@@ -2,8 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import uuidv4 from 'uuid';
+import Carousel from 'nuka-carousel';
 import { SVGIconText } from '../components/SVGIcon';
 import Rating from '../components/rating';
+import Img from '../components/img';
 
 export default class Hotel extends React.Component {
   state = {
@@ -30,7 +32,15 @@ export default class Hotel extends React.Component {
     return (
       <div className="hotel-page">
         <div className="hotel-page-header">
-          <div className="carousel" />
+          <div className="carousel">
+            {this.state.hotel.imagesId ? (
+              <Carousel>
+                {this.state.hotel.imagesId.map(imageId => <Img key={imageId} type="hotels" imageId={imageId} />)}
+              </Carousel>
+            ) : (
+              <div className="placeholder" style={{ width: '15rem', height: '10rem' }} />
+            )}
+          </div>
           <div className="wrapper">
             <div className="hotel-name">
               <h2>{this.state.hotel.name}</h2>
