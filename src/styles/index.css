@@ -307,7 +307,8 @@ template {
 .rating {
   padding: 0;
   list-style: none;
-  margin: 0.3rem 0; }
+  margin: 0.3rem 0;
+  display: inline-block; }
   .rating li {
     display: inline-block; }
 
@@ -321,6 +322,20 @@ template {
     .amenities li span {
       margin-left: 0.6rem;
       text-transform: capitalize; }
+
+.badge {
+  border-radius: 4px;
+  padding: 4px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: white;
+  margin-left: 0.8rem; }
+  .badge.badge-low {
+    background-color: #007f33; }
+  .badge.badge-medium {
+    background-color: #fe7f2d; }
+  .badge.badge-high {
+    background-color: #d93732; }
 
 div .slider-control-centerleft,
 div .slider-control-centerright,

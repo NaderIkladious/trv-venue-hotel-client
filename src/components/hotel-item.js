@@ -23,6 +23,9 @@ export default class HotelItem extends React.Component {
             <div className="hotel-item-info">
               <h4>{this.props.hotel.name}</h4>
               <Rating rate={this.props.hotel.rating.toPrecision(2)} />
+              <span className={`badge badge-${this.props.hotel.price_category}`}>
+                {this.props.hotel.price_category}
+              </span>
               <ul className="amenities">
                 {this.props.hotel.amenities ? (
                   this.props.hotel.amenities.map(item => (
