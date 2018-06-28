@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
+import * as _ from 'lodash';
 import { SVGIconText } from '../components/SVGIcon';
 import Rating from '../components/rating';
 import Img from '../components/img';
@@ -10,6 +11,7 @@ import Room from '../components/room';
 export default class Hotel extends React.Component {
   state = {
     loading: true,
+    sample: true,
     hotel: {},
     rooms: []
   };
@@ -28,6 +30,15 @@ export default class Hotel extends React.Component {
       });
     });
   }
+  rooms = () => {
+    const rooms = this.state.rooms;
+    let result = _.orderBy(rooms, 'price_in_usd');
+    this.state.sample ? (result = _.take(result, 2)) : false;
+    return result;
+  };
+  loadMore = () => {
+    this.setState({ sample: false });
+  };
   render() {
     return (
       <div className="hotel-page">
@@ -72,7 +83,7 @@ export default class Hotel extends React.Component {
             <div className="hotel-page-rooms">
               {this.state.rooms ? (
                 <ul className="room-list">
-                  {this.state.rooms.map(room => (
+                  {this.rooms().map(room => (
                     <li key={room.id}>
                       <Room room={room} hotel={this.state.hotel} />
                     </li>
@@ -82,6 +93,15 @@ export default class Hotel extends React.Component {
                 <p>Loading...</p>
               )}
             </div>
+            {this.state.sample ? (
+              <div class="load-more">
+                <span className="button badge" onClick={this.loadMore}>
+                  Load More
+                </span>
+              </div>
+            ) : (
+              ''
+            )}
           </div>
         </div>
       </div>

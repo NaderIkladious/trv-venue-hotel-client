@@ -435,6 +435,15 @@ div:not(:hover) .slider-control-bottomcenter {
       .hotel-page .hotel-page-header .hotel-page-header-text .hotel-name h2 {
         margin-bottom: 0.4rem; }
 
+.load-more {
+  text-align: center;
+  margin: 3rem; }
+  .load-more .button {
+    background-color: #1280ab;
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer; }
+
 .hotel-item {
   border: 1px solid #eee;
   border-radius: 3px;
