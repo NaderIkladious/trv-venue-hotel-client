@@ -496,7 +496,18 @@ div:not(:hover) .slider-control-bottomcenter {
     .room-item .room-item-details .room-item-reserve {
       width: 15rem;
       padding: 1rem;
-      text-align: center; }
+      text-align: center;
+      position: relative; }
+      .room-item .room-item-details .room-item-reserve:before {
+        content: '';
+        width: 2px;
+        background: #eee;
+        height: 80%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 1rem; }
       .room-item .room-item-details .room-item-reserve .room-price {
         font-size: 1.8rem;
         margin-top: 1.5rem; }

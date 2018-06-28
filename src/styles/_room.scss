@@ -38,6 +38,18 @@
       width: 15rem;
       padding: 1rem;
       text-align: center;
+      position: relative;
+      &:before {
+        content: '';
+        width: 2px;
+        background: #eee;
+        height: 80%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 1rem;
+      }
       .room-price {
         font-size: 1.8rem;
         margin-top: 1.5rem;
