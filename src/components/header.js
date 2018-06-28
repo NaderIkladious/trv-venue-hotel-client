@@ -13,7 +13,7 @@ export default class Header extends React.Component {
           <div className="user">
             <span>John Doe</span>
             <div className="avatar">
-              <img src="./images/avatar.png" alt="User Avatar" />
+              <img src="/images/avatar.png" alt="User Avatar" />
             </div>
           </div>
         </div>
