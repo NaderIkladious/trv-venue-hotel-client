@@ -9,7 +9,7 @@ const Rating = props => {
       props.rate - i > 0 && props.rate - i < 1 ? (name = 'STAR_HALF') : (name = 'STAR');
     }
     arr.push(
-      <li className="list-inline-item" key={i}>
+      <li className="list-inline-item" key={i} onClick={() => props.handleClick(i + 1)}>
         <SVGIcon width={props.width} name={name} fill={props.color} />
       </li>
     );
@@ -25,7 +25,8 @@ Rating.defaultProps = {
   max: 5,
   rate: 2.5,
   height: 8,
-  color: '#F4A11E'
+  color: '#F4A11E',
+  handleClick: () => false
 };
 
 export default Rating;

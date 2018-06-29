@@ -1,5 +1,6 @@
 import React from 'react';
 import { LandingContext, DEFAULT_FILTERS_CONTEXT } from '../containers/landing';
+import Rating from './rating';
 import * as _ from 'lodash';
 
 export default class Filters extends React.Component {
@@ -33,6 +34,11 @@ export default class Filters extends React.Component {
     e.preventDefault();
     context.update({ filters: this.state.filters });
   };
+  handleChoose = rate => {
+    const { filters } = this.state;
+    filters['rating'] = rate;
+    this.setState({ filters });
+  };
   render() {
     return (
       <LandingContext.Consumer>
@@ -60,6 +66,18 @@ export default class Filters extends React.Component {
                   value={this.state.filters.distance_to_venue}
                   onChange={this.handleChange}
                 />
+              </div>
+              <div>
+                <label>Minimum Rating </label>
+                {this.state.filters.rating ? (
+                  <span className="badge badge-high" onClick={() => this.handleChoose(0)}>
+                    x
+                  </span>
+                ) : (
+                  ''
+                )}
+                <br />
+                <Rating rate={this.state.filters.rating} handleClick={this.handleChoose} />
               </div>
               <div>
                 <label>Amenities</label>
