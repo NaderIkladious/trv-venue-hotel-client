@@ -13,7 +13,7 @@ export default class NewHotel extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    axios.post('http://localhost:3000/hotels', this.state).then(res => {
+    axios.post('http://localhost:4000/hotels', this.state).then(res => {
       console.log(res);
     });
   };

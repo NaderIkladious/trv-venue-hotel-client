@@ -16,13 +16,13 @@ export default class Hotel extends React.Component {
   };
   componentDidMount() {
     const hotelId = this.props.match.params.id;
-    axios.get(`http://localhost:3000/hotels/${hotelId}`).then(res => {
+    axios.get(`http://localhost:4000/hotels/${hotelId}`).then(res => {
       this.setState({
         hotel: res.data,
         loading: false
       });
     });
-    axios.get(`http://localhost:3000/rooms?hotel_id=${hotelId}`).then(res => {
+    axios.get(`http://localhost:4000/rooms?hotel_id=${hotelId}`).then(res => {
       console.log(res);
       this.setState({
         rooms: res.data

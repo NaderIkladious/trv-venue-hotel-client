@@ -24,7 +24,7 @@ export default class Confirmation extends React.Component {
         };
         localStorage.setItem(confirmationId, JSON.stringify(confirmation));
         this.setState({ confirmation });
-        axios.post('http://localhost:3000/confirmations', confirmation).then(res => {
+        axios.post('http://localhost:4000/confirmations', confirmation).then(res => {
           console.log('posting data', res);
         });
       }

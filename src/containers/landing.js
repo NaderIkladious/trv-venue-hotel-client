@@ -25,7 +25,7 @@ export default class Landing extends React.Component {
   };
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/hotels`).then(res => {
+    axios.get(`http://localhost:4000/hotels`).then(res => {
       this.setState({
         hotels: res.data,
         loading: false

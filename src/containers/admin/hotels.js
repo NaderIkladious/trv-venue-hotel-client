@@ -8,7 +8,7 @@ export default class AdminHotels extends React.Component {
   };
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/hotels`).then(res => {
+    axios.get(`http://localhost:4000/hotels`).then(res => {
       this.setState({
         hotels: res.data,
         loading: false
@@ -16,7 +16,7 @@ export default class AdminHotels extends React.Component {
     });
   }
   removeHotel = hotelId => {
-    axios.delete(`http://localhost:3000/hotels/${hotelId}`).then(res => {
+    axios.delete(`http://localhost:4000/hotels/${hotelId}`).then(res => {
       console.log(res);
       let { hotels } = this.state;
       _.remove(hotels, hotel => hotel.id === hotelId);
