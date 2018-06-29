@@ -45,9 +45,24 @@ hr {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label,
+button,
+div,
+a,
+input,
+select {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1em;
   /* 2 */ }
 
@@ -85,8 +100,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1em;
   /* 2 */ }
 
@@ -132,8 +146,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 100%;
   /* 1 */
   line-height: 1.15;
@@ -404,6 +417,12 @@ button,
   button:hover,
   .button:hover {
     background-color: #1e99ca; }
+
+@font-face {
+  font-family: 'Muli';
+  src: url("../fonts/muli/muli.woff2") format("woff2"), url("../fonts/muli/muli.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
 div .slider-control-centerleft,
 div .slider-control-centerright,
