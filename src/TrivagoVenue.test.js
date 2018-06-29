@@ -13,7 +13,7 @@ beforeAll(async () => {
 describe('Trivago Venue Tests', () => {
   test('Landing Page have 6 Hotels', async () => {
     const hotels = await page.$$('.hotel-item');
-    expect(hotels.length).toBe(6);
+    expect(hotels.length >= 6).toBe(true);
   });
   test('Redirect to Hotel Detail Page', async () => {
     await page.click('.hotel-item .hotel-item-link');
