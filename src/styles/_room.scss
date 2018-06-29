@@ -65,3 +65,32 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .room-item {
+    .room-item-details {
+      display: block;
+      .room-item-carousel {
+        width: 100%;
+        height: calc(100vw * 0.75);
+        .img {
+          width: 100%;
+          height: calc(100vw * 0.75);
+        }
+      }
+      .room-item-info {
+        padding: 1rem;
+      }
+      .room-item-reserve {
+        margin: 0 auto;
+        &:before {
+          bottom: auto;
+          left: 0;
+          right: 0;
+          height: 2px;
+          width: 80%;
+        }
+      }
+    }
+  }
+}

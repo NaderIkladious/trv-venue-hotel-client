@@ -448,6 +448,15 @@ div:not(:hover) .slider-control-bottomcenter {
         width: 100%;
         height: 100%; }
 
+@media (max-width: 700px) {
+  .logo {
+    margin-top: 10px;
+    display: inline-block; }
+    .logo img {
+      height: 50px; }
+  .user span {
+    display: none; } }
+
 .footer {
   clip-path: polygon(0 4rem, 100% 0, 100% 100%, 0 100%);
   background-color: #35312e; }
@@ -465,7 +474,8 @@ div:not(:hover) .slider-control-bottomcenter {
 
 .landing .landing-search {
   display: flex;
-  margin: 0 -1rem; }
+  margin: 0 -1rem;
+  flex-direction: row-reverse; }
   .landing .landing-search .landing-search-filters {
     padding: 1rem;
     width: 17rem; }
@@ -477,6 +487,10 @@ div:not(:hover) .slider-control-bottomcenter {
     .landing .landing-search .landing-search-result ul {
       list-style: none;
       padding: 0; }
+
+@media (max-width: 700px) {
+  .landing .landing-search {
+    display: block; } }
 
 .confirmation {
   padding-top: 3rem; }
@@ -546,6 +560,18 @@ div:not(:hover) .slider-control-bottomcenter {
         background-repeat: no-repeat;
         background-size: cover; }
 
+@media (max-width: 700px) {
+  .hotel-item .hotel-item-details {
+    display: block; }
+    .hotel-item .hotel-item-details .hotel-item-carousel {
+      width: 100%;
+      height: calc(100vw * 0.75); }
+      .hotel-item .hotel-item-details .hotel-item-carousel .img {
+        width: 100%;
+        height: calc(100vw * 0.75); }
+    .hotel-item .hotel-item-details .hotel-item-info {
+      padding: 1rem; } }
+
 .room-list {
   padding: 0;
   list-style: none; }
@@ -602,6 +628,26 @@ div:not(:hover) .slider-control-bottomcenter {
         display: inline-block;
         padding: 5px 15px;
         margin: 1rem auto 0; }
+
+@media (max-width: 700px) {
+  .room-item .room-item-details {
+    display: block; }
+    .room-item .room-item-details .room-item-carousel {
+      width: 100%;
+      height: calc(100vw * 0.75); }
+      .room-item .room-item-details .room-item-carousel .img {
+        width: 100%;
+        height: calc(100vw * 0.75); }
+    .room-item .room-item-details .room-item-info {
+      padding: 1rem; }
+    .room-item .room-item-details .room-item-reserve {
+      margin: 0 auto; }
+      .room-item .room-item-details .room-item-reserve:before {
+        bottom: auto;
+        left: 0;
+        right: 0;
+        height: 2px;
+        width: 80%; } }
 
 .trivago-admin {
   display: flex; }

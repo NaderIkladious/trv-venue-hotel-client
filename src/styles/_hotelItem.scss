@@ -30,3 +30,22 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .hotel-item {
+    .hotel-item-details {
+      display: block;
+      .hotel-item-carousel {
+        width: 100%;
+        height: calc(100vw * 0.75);
+        .img {
+          width: 100%;
+          height: calc(100vw * 0.75);
+        }
+      }
+      .hotel-item-info {
+        padding: 1rem;
+      }
+    }
+  }
+}

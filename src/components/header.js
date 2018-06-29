@@ -7,7 +7,7 @@ export default class Header extends React.Component {
     return (
       <header className="header">
         <div className="wrapper">
-          <Link to="/" title="Trivago Venue Hotel">
+          <Link to="/" title="Trivago Venue Hotel" className="logo">
             <img src={logo} alt="Trivago Venue Hotel Logo" height="70px" />
           </Link>
           <div className="user">

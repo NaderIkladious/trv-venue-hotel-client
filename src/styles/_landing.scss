@@ -2,6 +2,7 @@
   .landing-search {
     display: flex;
     margin: 0 -1rem;
+    flex-direction: row-reverse;
 
     .landing-search-filters {
       padding: 1rem;
@@ -20,6 +21,14 @@
         list-style: none;
         padding: 0;
       }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .landing {
+    .landing-search {
+      display: block;
     }
   }
 }

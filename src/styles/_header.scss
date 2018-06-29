@@ -32,3 +32,18 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .logo {
+    margin-top: 10px;
+    display: inline-block;
+    img {
+      height: 50px;
+    }
+  }
+  .user {
+    span {
+      display: none;
+    }
+  }
+}

@@ -7,7 +7,10 @@ export default class Header extends React.Component {
         <div className="wrapper">
           <div className="footer-content">
             <p>
-              Made with <span rold="img">❤️ </span>by <a href="https://github.com/NaderIkladious">Nader Ikladious</a>
+              Made with{' '}
+              <span role="img" aria-label="heart">
+                ❤️
+              </span>by <a href="https://github.com/NaderIkladious">Nader Ikladious</a>
             </p>
           </div>
         </div>

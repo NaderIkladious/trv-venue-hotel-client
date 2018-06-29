@@ -54,6 +54,7 @@ export default class Landing extends React.Component {
           <div className="wrapper">
             <h2>Recommended Hotels</h2>
             <div className="landing-search">
+              <Filters />
               <div className="landing-search-result">
                 {this.state.loading ? (
                   <p>Loading...</p>
@@ -67,7 +68,6 @@ export default class Landing extends React.Component {
                   </ul>
                 )}
               </div>
-              <Filters />
             </div>
           </div>
         </div>
