@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Carousel from 'nuka-carousel';
+import { Helmet } from 'react-helmet';
 import * as _ from 'lodash';
 import { Rating, Img, SVGIconText, Room } from '../components';
 
@@ -38,6 +39,9 @@ export default class Hotel extends React.Component {
   render() {
     return (
       <div className="hotel-page">
+        <Helmet>
+          <title>{this.state.hotel.name}</title>
+        </Helmet>
         <div className="hotel-page-header">
           <div className="carousel">
             {this.state.hotel.imagesId ? (

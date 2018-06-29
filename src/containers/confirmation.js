@@ -1,6 +1,7 @@
 import React from 'react';
 import * as _ from 'lodash';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
 export default class Confirmation extends React.Component {
   state = {
@@ -43,6 +44,9 @@ export default class Confirmation extends React.Component {
     const { confirmation } = this.state;
     return (
       <div className="confirmation">
+        <Helmet>
+          <title>{`Confirmation #${confirmation.id}`}</title>
+        </Helmet>
         <div className="wrapper">
           <h3>Thanks for using Trivago</h3>
           <div className="reservations-details">

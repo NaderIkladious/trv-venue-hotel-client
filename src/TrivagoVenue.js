@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Header, Footer } from './components';
 import Landing from './containers/landing';
 import Confirmation from './containers/confirmation';
@@ -12,6 +13,9 @@ class TrivagoVenue extends React.Component {
       <div className="trivago-venue">
         <Router>
           <React.Fragment>
+            <Helmet>
+              <title>Trivago Venue Hotel</title>
+            </Helmet>
             <Header />
             <div className="main">
               <Route exact path="/" component={Landing} />
