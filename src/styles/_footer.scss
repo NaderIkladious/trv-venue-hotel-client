@@ -1,0 +1,18 @@
+.footer {
+  clip-path: polygon(0 4rem, 100% 0, 100% 100%, 0 100%);
+  background-color: #35312e;
+  .footer-content {
+    display: flex;
+    min-height: 300px;
+  }
+  p {
+    color: white;
+    text-align: center;
+    align-self: flex-end;
+    display: block;
+    margin: 10px auto;
+    a {
+      color: white;
+    }
+  }
+}

@@ -8,6 +8,7 @@ export const DEFAULT_FILTERS_CONTEXT = {
   filters: {
     price_category: '',
     distance_to_venue: 10000,
+    rating: 0,
     amenities: ['free_wifi']
   }
 };
@@ -33,13 +34,14 @@ export default class Landing extends React.Component {
   }
 
   filteredHotels() {
-    const { price_category, distance_to_venue, amenities } = this.state.filters;
+    const { price_category, distance_to_venue, amenities, rating } = this.state.filters;
 
     const result = _.filter(this.state.hotels, hotel => {
       return (
         (price_category && price_category.length ? hotel.price_category === price_category : true) &&
         (amenities && _.intersection(hotel.amenities, amenities).length === amenities.length) &&
-        (distance_to_venue && hotel.distance_to_venue <= distance_to_venue)
+        (distance_to_venue && hotel.distance_to_venue <= distance_to_venue) &&
+        hotel.rating >= rating
       );
     });
     return result;

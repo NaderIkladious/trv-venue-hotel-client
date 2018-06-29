@@ -7,9 +7,11 @@ export default class Header extends React.Component {
     return (
       <footer className="footer">
         <div className="wrapper">
-          <p>
-            Made with ❤ by <a href="https://github.com/NaderIkladious">Nader Ikladious</a>
-          </p>
+          <div className="footer-content">
+            <p>
+              Made with ❤️ by <a href="https://github.com/NaderIkladious">Nader Ikladious</a>
+            </p>
+          </div>
         </div>
       </footer>
     );

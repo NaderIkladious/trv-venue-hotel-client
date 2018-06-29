@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/header';
+import Footer from './components/footer';
 import Landing from './containers/landing';
 import Confirmation from './containers/confirmation';
 import Hotel from './containers/hotel';
@@ -19,6 +20,7 @@ class TrivagoVenue extends React.Component {
               <Route path="/confirmation/:id" component={Confirmation} />
               <Route path="/admin" component={Admin} />
             </div>
+            <Footer />
           </React.Fragment>
         </Router>
       </div>
