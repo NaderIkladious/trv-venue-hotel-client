@@ -325,6 +325,11 @@ template {
   .rating li {
     display: inline-block; }
 
+.close {
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 5px !important; }
+
 .amenities {
   padding: 0;
   list-style: none; }
@@ -417,6 +422,12 @@ button,
   button:hover,
   .button:hover {
     background-color: #1e99ca; }
+  button.button-green,
+  .button.button-green {
+    background-color: #007f33; }
+    button.button-green:hover,
+    .button.button-green:hover {
+      background-color: #1eaf58; }
 
 @font-face {
   font-family: 'Muli';
@@ -491,21 +502,25 @@ div:not(:hover) .slider-control-bottomcenter {
     .footer p a {
       color: white; }
 
-.landing .landing-search {
-  display: flex;
-  margin: 0 -1rem;
-  flex-direction: row-reverse; }
-  .landing .landing-search .landing-search-filters {
-    padding: 1rem;
-    width: 17rem; }
-    .landing .landing-search .landing-search-filters form {
-      margin-top: 1rem; }
-  .landing .landing-search .landing-search-result {
-    flex-grow: 1;
-    padding: 1rem; }
-    .landing .landing-search .landing-search-result ul {
-      list-style: none;
-      padding: 0; }
+.landing {
+  padding: 20px 0; }
+  .landing h2 {
+    margin: 0; }
+  .landing .landing-search {
+    display: flex;
+    margin: 0 -1rem;
+    flex-direction: row-reverse; }
+    .landing .landing-search .landing-search-filters {
+      padding: 1rem;
+      width: 17rem; }
+      .landing .landing-search .landing-search-filters form {
+        margin-top: 1rem; }
+    .landing .landing-search .landing-search-result {
+      flex-grow: 1;
+      padding: 1rem; }
+      .landing .landing-search .landing-search-result ul {
+        list-style: none;
+        padding: 0; }
 
 @media (max-width: 700px) {
   .landing .landing-search {

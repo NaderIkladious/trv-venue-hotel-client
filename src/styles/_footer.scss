@@ -1,6 +1,6 @@
 .footer {
   clip-path: polygon(0 4rem, 100% 0, 100% 100%, 0 100%);
-  background-color: #35312e;
+  background-color: $footer-color;
   .footer-content {
     display: flex;
     min-height: 300px;

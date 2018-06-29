@@ -28,7 +28,7 @@ export class Room extends React.Component {
           <div className="room-item-reserve">
             <div className="room-price">${this.props.room.price_in_usd.toPrecision(5)}</div>
             <Link
-              className="room-reserve badge badge-low"
+              className="room-reserve button button-green"
               to={{
                 pathname: `/confirmation/${uuidv4()}`,
                 state: { room: this.props.room, hotel: this.props.hotel }

@@ -70,7 +70,7 @@ export class Filters extends React.Component {
               <div>
                 <label>Minimum Rating </label>
                 {this.state.filters.rating ? (
-                  <span className="badge badge-high" onClick={() => this.handleChoose(0)}>
+                  <span className="badge badge-high close" onClick={() => this.handleChoose(0)}>
                     x
                   </span>
                 ) : (
