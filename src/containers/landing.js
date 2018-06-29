@@ -9,7 +9,7 @@ export const DEFAULT_FILTERS_CONTEXT = {
     price_category: '',
     distance_to_venue: 10000,
     rating: 0,
-    amenities: ['free_wifi']
+    amenities: []
   }
 };
 export const LandingContext = React.createContext(DEFAULT_FILTERS_CONTEXT);

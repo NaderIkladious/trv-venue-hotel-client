@@ -50,7 +50,7 @@ export default class Confirmation extends React.Component {
               <tbody>
                 <tr>
                   <td>Confirmation ID</td>
-                  <td>{confirmation.id}</td>
+                  <td className="confirmation-id">{confirmation.id}</td>
                 </tr>
                 <tr>
                   <td>Hotel Name</td>
@@ -66,11 +66,11 @@ export default class Confirmation extends React.Component {
                 </tr>
                 <tr>
                   <td>First Name</td>
-                  <td>{confirmation.firstName}</td>
+                  <td className="first-name">{confirmation.firstName}</td>
                 </tr>
                 <tr>
                   <td>Last Name</td>
-                  <td>{confirmation.lastName}</td>
+                  <td className="last-name">{confirmation.lastName}</td>
                 </tr>
               </tbody>
             </table>

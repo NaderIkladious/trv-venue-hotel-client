@@ -9,7 +9,7 @@ export default class HotelItem extends React.Component {
   render() {
     return (
       <div className="hotel-item">
-        <Link to={`/hotels/${this.props.hotel.id}`}>
+        <Link to={`/hotels/${this.props.hotel.id}`} className="hotel-item-link">
           <div className="hotel-item-details">
             <div className="hotel-item-carousel">
               {this.props.hotel.imagesId && this.props.hotel.imagesId.length ? (

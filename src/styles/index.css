@@ -541,7 +541,8 @@ div:not(:hover) .slider-control-bottomcenter {
   overflow: hidden; }
   .hotel-item > a {
     color: #333;
-    text-decoration: none; }
+    text-decoration: none;
+    display: block; }
   .hotel-item .hotel-item-details {
     display: flex; }
     .hotel-item .hotel-item-details h4 {
