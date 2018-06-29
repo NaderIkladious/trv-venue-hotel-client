@@ -44,19 +44,36 @@ export default class Confirmation extends React.Component {
     return (
       <div className="confirmation">
         <div className="wrapper">
-          <h3>Reservation Confirmation</h3>
-
+          <h3>Thanks for using Trivago</h3>
           <div className="reservations-details">
-            <div className="left">
-              <p>Confirmation ID: {confirmation.id}</p>
-              <p>Hotel Name: {confirmation.hotelName}</p>
-              <p>Room Name: {confirmation.roomName}</p>
-              <p>Price / Night: ${parseFloat(confirmation.price).toPrecision(5)}</p>
-            </div>
-            <div className="right">
-              <p>First Name: {confirmation.firstName}</p>
-              <p>Last Name: {confirmation.lastName}</p>
-            </div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Confirmation ID</td>
+                  <td>{confirmation.id}</td>
+                </tr>
+                <tr>
+                  <td>Hotel Name</td>
+                  <td>{confirmation.hotelName}</td>
+                </tr>
+                <tr>
+                  <td>Room Name</td>
+                  <td>{confirmation.roomName}</td>
+                </tr>
+                <tr>
+                  <td>Price / Night</td>
+                  <td>${parseFloat(confirmation.price).toPrecision(5)}</td>
+                </tr>
+                <tr>
+                  <td>First Name</td>
+                  <td>{confirmation.firstName}</td>
+                </tr>
+                <tr>
+                  <td>Last Name</td>
+                  <td>{confirmation.lastName}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

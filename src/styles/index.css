@@ -478,6 +478,16 @@ div:not(:hover) .slider-control-bottomcenter {
       list-style: none;
       padding: 0; }
 
+.confirmation {
+  padding-top: 3rem; }
+  .confirmation h3 {
+    text-align: center; }
+  .confirmation table {
+    margin: 0 auto; }
+    .confirmation table td {
+      background: white;
+      padding: 0.8rem 1rem; }
+
 .hotel-page .hotel-page-header {
   position: relative; }
   .hotel-page .hotel-page-header .carousel {

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../logo.png';
 
 export default class Header extends React.Component {
   render() {
@@ -9,7 +7,7 @@ export default class Header extends React.Component {
         <div className="wrapper">
           <div className="footer-content">
             <p>
-              Made with ❤️ by <a href="https://github.com/NaderIkladious">Nader Ikladious</a>
+              Made with <span rold="img">❤️ </span>by <a href="https://github.com/NaderIkladious">Nader Ikladious</a>
             </p>
           </div>
         </div>
