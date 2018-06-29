@@ -12,19 +12,19 @@ class Admin extends React.Component {
           <div className="d-flex">
             <ul className="admin-navigation">
               <li>
-                <NavLink to="/admin/hotels/edit" activeClassName="selected">
+                <NavLink to="/admin/manage" activeClassName="selected">
                   Manage Hotels
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/admin/hotels/new" activeClassName="selected">
+                <NavLink to="/admin/new" activeClassName="selected">
                   New Hotel
                 </NavLink>
               </li>
             </ul>
             <div className="admin-view">
-              <Route path="/admin/hotels/edit" component={AdminHotels} />
-              <Route path="/admin/hotels/new" component={NewHotel} />
+              <Route path="/admin/manage" component={AdminHotels} />
+              <Route path="/admin/new" component={NewHotel} />
             </div>
           </div>
         </div>

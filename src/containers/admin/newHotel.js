@@ -47,6 +47,7 @@ export default class NewHotel extends React.Component {
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
+              required="required"
             />
           </div>
           <div className="form-element">
