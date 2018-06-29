@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SVGIconText } from './SVGIcon';
 import Carousel from 'nuka-carousel';
-import Rating from './rating';
-import Img from './img';
+import { Rating, Img, SVGIconText } from '.';
 
-export default class HotelItem extends React.Component {
+export class HotelItem extends React.Component {
   render() {
     return (
       <div className="hotel-item">

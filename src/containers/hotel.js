@@ -2,10 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Carousel from 'nuka-carousel';
 import * as _ from 'lodash';
-import { SVGIconText } from '../components/SVGIcon';
-import Rating from '../components/rating';
-import Img from '../components/img';
-import Room from '../components/room';
+import { Rating, Img, SVGIconText, Room } from '../components';
 
 export default class Hotel extends React.Component {
   state = {

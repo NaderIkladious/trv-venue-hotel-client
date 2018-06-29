@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import uuidv4 from 'uuid';
 import Carousel from 'nuka-carousel';
-import Img from './img';
+import { Img } from '.';
 
-export default class HotelItem extends React.Component {
+export class Room extends React.Component {
   render() {
     return (
       <div className="room-item">

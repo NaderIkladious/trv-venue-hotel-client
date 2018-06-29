@@ -1,9 +1,9 @@
 import React from 'react';
 import { LandingContext, DEFAULT_FILTERS_CONTEXT } from '../containers/landing';
-import Rating from './rating';
+import { Rating } from '.';
 import * as _ from 'lodash';
 
-export default class Filters extends React.Component {
+export class Filters extends React.Component {
   state = {
     ...DEFAULT_FILTERS_CONTEXT
   };

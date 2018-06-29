@@ -1,7 +1,7 @@
 import React from 'react';
-import { SVGIcon } from './SVGIcon';
+import { SVGIcon } from '.';
 
-const Rating = props => {
+export const Rating = props => {
   let arr = [];
   for (let i = 0; i < props.max; i++) {
     let name = 'STAR_BORDER';
@@ -28,5 +28,3 @@ Rating.defaultProps = {
   color: '#F4A11E',
   handleClick: () => false
 };
-
-export default Rating;
