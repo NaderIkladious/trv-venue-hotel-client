@@ -25,3 +25,7 @@ Open [http://localhost:4001](http://localhost:4001) to view it in the browser.
 
 Launches the test runner.<br>
 App must be running before running the tests.
+
+#### `/admin/manage`
+
+To access the administrative pages.
