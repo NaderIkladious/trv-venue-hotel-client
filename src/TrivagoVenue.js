@@ -1,11 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Header, Footer } from './components';
-import Landing from './containers/landing';
-import Confirmation from './containers/confirmation';
-import Hotel from './containers/hotel';
-import Admin from './containers/admin/index';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import { Header, Footer } from './components';
+import { Landing, Confirmation, Hotel, Admin } from './containers';
 
 class TrivagoVenue extends React.Component {
   render() {

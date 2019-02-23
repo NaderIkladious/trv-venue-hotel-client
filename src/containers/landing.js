@@ -6,7 +6,7 @@ import { DEFAULT_FILTERS_CONTEXT } from '../core/consts';
 
 export const LandingContext = React.createContext(DEFAULT_FILTERS_CONTEXT);
 
-export default class Landing extends React.Component {
+export class Landing extends React.Component {
   state = {
     hotels: [],
     loading: true,

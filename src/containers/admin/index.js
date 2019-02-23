@@ -3,7 +3,7 @@ import { Route, NavLink } from 'react-router-dom';
 import AdminHotels from './hotels';
 import NewHotel from './newHotel';
 
-class Admin extends React.Component {
+export class Admin extends React.Component {
   render() {
     return (
       <div className="trivago-admin">
@@ -32,5 +32,3 @@ class Admin extends React.Component {
     );
   }
 }
-
-export default Admin;

@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import _ from 'lodash';
 import { Rating, Img, SVGIconText, Room, Spinner } from '../components';
 
-export default class Hotel extends React.Component {
+export class Hotel extends React.Component {
   state = {
     loading: true,
     sample: true,

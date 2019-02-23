@@ -3,7 +3,7 @@ import _ from 'lodash';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 
-export default class Confirmation extends React.Component {
+export class Confirmation extends React.Component {
   state = {
     confirmation: {}
   };
