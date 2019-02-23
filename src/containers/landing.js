@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import _ from 'lodash';
-import { HotelItem, Filters } from '../components';
+import { HotelItem, Filters, Spinner } from '../components';
 import { DEFAULT_FILTERS_CONTEXT } from '../core/consts';
 
 export const LandingContext = React.createContext(DEFAULT_FILTERS_CONTEXT);
@@ -49,7 +49,7 @@ export default class Landing extends React.Component {
               <Filters />
               <div className="landing-search-result">
                 {this.state.loading ? (
-                  <p>Loading...</p>
+                  <Spinner />
                 ) : (
                   <ul>
                     {this.filteredHotels().map(hotel => (

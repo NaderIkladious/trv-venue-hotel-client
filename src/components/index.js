@@ -6,3 +6,4 @@ export * from './img';
 export * from './rating';
 export * from './room';
 export * from './SVGIcon';
+export * from './spinner';

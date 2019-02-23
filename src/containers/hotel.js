@@ -3,7 +3,7 @@ import axios from 'axios';
 import Carousel from 'nuka-carousel';
 import { Helmet } from 'react-helmet';
 import _ from 'lodash';
-import { Rating, Img, SVGIconText, Room } from '../components';
+import { Rating, Img, SVGIconText, Room, Spinner } from '../components';
 
 export default class Hotel extends React.Component {
   state = {
@@ -92,7 +92,7 @@ export default class Hotel extends React.Component {
                   ))}
                 </ul>
               ) : (
-                <p>Loading...</p>
+                <Spinner />
               )}
             </div>
             {this.state.sample ? (
