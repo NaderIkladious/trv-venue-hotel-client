@@ -1,16 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { HotelItem, Filters } from '../components';
 import _ from 'lodash';
+import { HotelItem, Filters } from '../components';
+import { DEFAULT_FILTERS_CONTEXT } from '../core/consts';
 
-export const DEFAULT_FILTERS_CONTEXT = {
-  filters: {
-    price_category: '',
-    distance_to_venue: 10000,
-    rating: 0,
-    amenities: []
-  }
-};
 export const LandingContext = React.createContext(DEFAULT_FILTERS_CONTEXT);
 
 export default class Landing extends React.Component {

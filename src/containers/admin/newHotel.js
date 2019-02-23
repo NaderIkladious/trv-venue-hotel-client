@@ -2,6 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import axios from 'axios';
 
+import { AMENITIES } from '../../core/consts';
+
 export default class NewHotel extends React.Component {
   state = {
     name: '',
@@ -82,83 +84,19 @@ export default class NewHotel extends React.Component {
           </div>
           <div>
             <label>Amenities</label>
-            <div>
-              <input
-                type="checkbox"
-                id="free_wifi"
-                name="free_wifi"
-                value="free_wifi"
-                checked={_.includes(this.state.amenities, 'free_wifi')}
-                onChange={this.handleCheck}
-              />
-              <label htmlFor="free_wifi">Free Wifi</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="free_parking"
-                name="free_parking"
-                value="free_parking"
-                checked={_.includes(this.state.amenities, 'free_parking')}
-                onChange={this.handleCheck}
-              />
-              <label htmlFor="free_parking">Free Parking</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="pets"
-                name="pets"
-                value="pets"
-                checked={_.includes(this.state.amenities, 'pets')}
-                onChange={this.handleCheck}
-              />
-              <label htmlFor="pets">Pets</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="restaurant"
-                name="restaurant"
-                value="restaurant"
-                checked={_.includes(this.state.amenities, 'restaurant')}
-                onChange={this.handleCheck}
-              />
-              <label htmlFor="restaurant">Restaurant</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="gym"
-                name="gym"
-                value="gym"
-                checked={_.includes(this.state.amenities, 'gym')}
-                onChange={this.handleCheck}
-              />
-              <label htmlFor="gym">Gym</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="pool"
-                name="pool"
-                value="pool"
-                checked={_.includes(this.state.amenities, 'pool')}
-                onChange={this.handleCheck}
-              />
-              <label htmlFor="pool">Pool</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="spa"
-                name="spa"
-                value="spa"
-                checked={_.includes(this.state.amenities, 'spa')}
-                onChange={this.handleCheck}
-              />
-              <label htmlFor="spa">Spa</label>
-            </div>
+            {AMENITIES.map(amenity => (
+              <div key={amenity.key}>
+                <input
+                  type="checkbox"
+                  id={amenity.id}
+                  name={amenity.id}
+                  value={amenity.id}
+                  checked={_.includes(this.state.amenities, amenity.id)}
+                  onChange={this.handleCheck}
+                />
+                <label htmlFor={amenity.id}>{amenity.name}</label>
+              </div>
+            ))}
           </div>
           <div className="form-element center">
             <button onClick={this.handleSubmit}>Submit</button>
