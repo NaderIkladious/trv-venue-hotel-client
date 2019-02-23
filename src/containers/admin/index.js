@@ -12,7 +12,7 @@ class Admin extends React.Component {
           <div className="d-flex">
             <ul className="admin-navigation">
               <li>
-                <NavLink to="/admin/manage" activeClassName="selected">
+                <NavLink to="/admin" exact activeClassName="selected">
                   Manage Hotels
                 </NavLink>
               </li>
@@ -23,7 +23,7 @@ class Admin extends React.Component {
               </li>
             </ul>
             <div className="admin-view">
-              <Route path="/admin/manage" component={AdminHotels} />
+              <Route path="/admin" component={AdminHotels} />
               <Route path="/admin/new" component={NewHotel} />
             </div>
           </div>
