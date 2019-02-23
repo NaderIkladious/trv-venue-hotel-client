@@ -514,7 +514,9 @@ div:not(:hover) .slider-control-bottomcenter {
       padding: 1rem;
       width: 17rem; }
       .landing .landing-search .landing-search-filters form {
-        margin-top: 1rem; }
+        margin-top: 1rem;
+        position: sticky;
+        top: 140px; }
     .landing .landing-search .landing-search-result {
       flex-grow: 1;
       padding: 1rem; }
