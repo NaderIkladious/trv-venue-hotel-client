@@ -12,7 +12,9 @@ export class HotelItem extends React.Component {
             <div className="hotel-item-carousel">
               {this.props.hotel.imagesId && this.props.hotel.imagesId.length ? (
                 <Carousel>
-                  {this.props.hotel.imagesId.map(imageId => <Img key={imageId} type="hotels" imageId={imageId} />)}
+                  {this.props.hotel.imagesId.map(imageId => (
+                    <Img key={imageId} type="hotels" imageId={imageId} />
+                  ))}
                 </Carousel>
               ) : (
                 <div className="placeholder" style={{ width: '15rem', height: '10rem' }} />

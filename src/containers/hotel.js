@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Carousel from 'nuka-carousel';
 import { Helmet } from 'react-helmet';
-import * as _ from 'lodash';
+import _ from 'lodash';
 import { Rating, Img, SVGIconText, Room } from '../components';
 
 export default class Hotel extends React.Component {
@@ -46,7 +46,9 @@ export default class Hotel extends React.Component {
           <div className="carousel">
             {this.state.hotel.imagesId ? (
               <Carousel>
-                {this.state.hotel.imagesId.map(imageId => <Img key={imageId} type="hotels" imageId={imageId} />)}
+                {this.state.hotel.imagesId.map(imageId => (
+                  <Img key={imageId} type="hotels" imageId={imageId} />
+                ))}
               </Carousel>
             ) : (
               <div className="placeholder" style={{ width: '100%', height: '100%' }} />
