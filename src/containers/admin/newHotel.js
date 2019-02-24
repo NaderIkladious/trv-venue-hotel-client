@@ -20,18 +20,19 @@ export default class NewHotel extends React.Component {
     });
   };
   handleChange = e => {
-    const state = this.state;
-    state[e.target.name] = e.target.value;
+    const { state } = this;
+    const { name, value } = e.target;
+    state[name] = Number(value) == value ? Number(value) : value;
     this.setState({ ...state });
   };
   handleCheck = e => {
-    const target = e.target;
+    const { checked, value } = e.target;
     this.setState(prevState => {
       let amenities = [];
-      if (target.checked) {
-        amenities = [...prevState.amenities, target.value];
+      if (checked) {
+        amenities = [...prevState.amenities, value];
       } else {
-        amenities = _.pull(prevState.amenities, target.value);
+        amenities = _.pull(prevState.amenities, value);
       }
       return {
         amenities
@@ -79,6 +80,20 @@ export default class NewHotel extends React.Component {
               max="10000"
               step="100"
               value={this.state.distance_to_venue}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div>
+            <label>Rating: {this.state.rating}</label>
+            <br />
+            <input
+              type="range"
+              id="rating"
+              name="rating"
+              min="0"
+              max="5"
+              step="0.1"
+              value={this.state.rating}
               onChange={this.handleChange}
             />
           </div>
