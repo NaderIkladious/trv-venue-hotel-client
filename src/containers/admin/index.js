@@ -23,7 +23,7 @@ export class Admin extends React.Component {
               </li>
             </ul>
             <div className="admin-view">
-              <Route path="/admin" component={AdminHotels} />
+              <Route path="/admin" exact component={AdminHotels} />
               <Route path="/admin/new" component={NewHotel} />
             </div>
           </div>
