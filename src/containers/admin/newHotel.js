@@ -22,7 +22,7 @@ export default class NewHotel extends React.Component {
   handleChange = e => {
     const { state } = this;
     const { name, value } = e.target;
-    state[name] = Number(value) == value ? Number(value) : value;
+    state[name] = Number(value) === value ? Number(value) : value;
     this.setState({ ...state });
   };
   handleCheck = e => {
@@ -100,7 +100,7 @@ export default class NewHotel extends React.Component {
           <div>
             <label>Amenities</label>
             {AMENITIES.map(amenity => (
-              <div key={amenity.key}>
+              <div key={amenity.id}>
                 <input
                   type="checkbox"
                   id={amenity.id}

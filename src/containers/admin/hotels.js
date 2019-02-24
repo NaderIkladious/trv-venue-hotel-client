@@ -16,8 +16,7 @@ export default class AdminHotels extends React.Component {
     });
   }
   removeHotel = hotelId => {
-    axios.delete(`http://localhost:4000/hotels/${hotelId}`).then(res => {
-      console.log(res);
+    axios.delete(`http://localhost:4000/hotels/${hotelId}`).then(() => {
       let { hotels } = this.state;
       _.remove(hotels, hotel => hotel.id === hotelId);
       this.setState(hotels);

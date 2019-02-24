@@ -22,6 +22,7 @@
     .landing-search-result {
       flex-grow: 1;
       padding: 1rem;
+      width: 80%;
 
       ul {
         list-style: none;
@@ -35,6 +36,9 @@
   .landing {
     .landing-search {
       display: block;
+      .landing-search-result {
+        width: auto;
+      }
     }
   }
 }

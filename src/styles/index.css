@@ -519,14 +519,17 @@ div:not(:hover) .slider-control-bottomcenter {
         top: 140px; }
     .landing .landing-search .landing-search-result {
       flex-grow: 1;
-      padding: 1rem; }
+      padding: 1rem;
+      width: 80%; }
       .landing .landing-search .landing-search-result ul {
         list-style: none;
         padding: 0; }
 
 @media (max-width: 700px) {
   .landing .landing-search {
-    display: block; } }
+    display: block; }
+    .landing .landing-search .landing-search-result {
+      width: auto; } }
 
 .confirmation {
   padding-top: 3rem; }
