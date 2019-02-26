@@ -1,6 +1,10 @@
 import React from 'react';
 import { ICONS } from '../icons';
 
+/**
+ * Render SVG Icons
+ * @param {object} props Object with SVG info
+ */
 export const SVGIcon = props => {
   const icon = ICONS[props.name] || ICONS['CIRCLE'];
   return (

@@ -2,9 +2,12 @@ import React from 'react';
 import axios from 'axios';
 import _ from 'lodash';
 
+import { Spinner, SVGIcon } from '../../components';
+
 export default class AdminHotels extends React.Component {
   state = {
-    hotels: []
+    hotels: [],
+    loading: true
   };
 
   componentDidMount() {
@@ -25,16 +28,22 @@ export default class AdminHotels extends React.Component {
   render() {
     return (
       <div className="admin-hotels">
-        <ul>
-          {this.state.hotels.map(hotel => (
-            <li key={hotel.id}>
-              <h4>{hotel.name}</h4>
-              <span className="hotel-remove badge badge-high" onClick={e => this.removeHotel(hotel.id)}>
-                X
-              </span>
-            </li>
-          ))}
-        </ul>
+        {this.state.loading ? (
+          <div>
+            <Spinner />
+          </div>
+        ) : (
+          <ul>
+            {this.state.hotels.map(hotel => (
+              <li key={hotel.id}>
+                <h4>{hotel.name}</h4>
+                <div class="hotel-remove" onClick={e => this.removeHotel(hotel.id)}>
+                  <SVGIcon name="TRASH" width="24" fill="#d93732" />
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     );
   }

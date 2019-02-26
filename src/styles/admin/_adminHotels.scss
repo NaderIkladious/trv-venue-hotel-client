@@ -1,6 +1,18 @@
 .admin-hotels {
+  margin-bottom: 50px;
+  min-height: 400px;
   ul {
     list-style: none;
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.5px solid #cecece63;
+      padding: 0 20px;
+      .hotel-remove {
+        cursor: pointer;
+      }
+    }
     h4 {
       display: inline-block;
     }

@@ -16,13 +16,13 @@ export default class NewHotel extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     axios.post('http://localhost:4000/hotels', this.state).then(res => {
-      console.log(res);
+      this.props.history.push('/admin');
     });
   };
   handleChange = e => {
     const { state } = this;
     const { name, value } = e.target;
-    state[name] = Number(value) === value ? Number(value) : value;
+    state[name] = parseFloat(value) === NaN ? Number(value) : value;
     this.setState({ ...state });
   };
   handleCheck = e => {

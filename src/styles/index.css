@@ -740,12 +740,23 @@ div:not(:hover) .slider-control-bottomcenter {
     background-color: white;
     flex-grow: 1; }
 
-.admin-hotels ul {
-  list-style: none; }
-  .admin-hotels ul h4 {
-    display: inline-block; }
-  .admin-hotels ul .badge {
-    cursor: pointer; }
+.admin-hotels {
+  margin-bottom: 50px;
+  min-height: 400px; }
+  .admin-hotels ul {
+    list-style: none; }
+    .admin-hotels ul li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.5px solid #cecece63;
+      padding: 0 20px; }
+      .admin-hotels ul li .hotel-remove {
+        cursor: pointer; }
+    .admin-hotels ul h4 {
+      display: inline-block; }
+    .admin-hotels ul .badge {
+      cursor: pointer; }
 
 body {
   background: #fafafa;
