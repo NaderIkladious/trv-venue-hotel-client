@@ -13,18 +13,36 @@ export default class NewHotel extends React.Component {
     distance_to_venue: 0,
     amenities: []
   };
+
+  /**
+   * Call POST api to add new hotel using the state object
+   * @param {Object} e The submit event
+   * @returns {Void}
+   */
   handleSubmit = e => {
     e.preventDefault();
     axios.post('http://localhost:4000/hotels', this.state).then(res => {
       this.props.history.push('/admin');
     });
   };
+
+  /**
+   * Handle changing fields and save it to state
+   * @param {Object} e The change event
+   * @returns {Void}
+   */
   handleChange = e => {
     const { state } = this;
     const { name, value } = e.target;
-    state[name] = parseFloat(value) === NaN ? Number(value) : value;
+    state[name] = isNaN(parseFloat(value)) ? Number(value) : value;
     this.setState({ ...state });
   };
+
+  /**
+   * Handle changing the check state and save it to state
+   * @param {Object} e The checking event
+   * @returns {Void}
+   */
   handleCheck = e => {
     const { checked, value } = e.target;
     this.setState(prevState => {
@@ -39,6 +57,7 @@ export default class NewHotel extends React.Component {
       };
     });
   };
+
   render() {
     return (
       <div className="new-hotel">

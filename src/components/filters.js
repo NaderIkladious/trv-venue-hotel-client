@@ -9,6 +9,13 @@ export class Filters extends React.Component {
   state = {
     ...DEFAULT_FILTERS_CONTEXT
   };
+
+  /**
+   * Handle changing text values
+   * @param {event} e The field value change event
+   * @param {Context} context React context
+   * @returns {Void}
+   */
   handleChange = (e, context) => {
     const { filters } = this.state;
     filters[e.target.name] = e.target.value;
@@ -16,15 +23,22 @@ export class Filters extends React.Component {
       context.update({ filters });
     });
   };
+
+  /**
+   * Handle checking and unchecking amenities
+   * @param {object} e The change event
+   * @param {Context} context React Context
+   * @returns {Void}
+   */
   handleCheck = (e, context) => {
-    const target = e.target;
+    const { checked, value } = e.target;
     this.setState(
       prevState => {
         let amenities = [];
-        if (target.checked) {
-          amenities = [...prevState.filters.amenities, target.value];
+        if (checked) {
+          amenities = [...prevState.filters.amenities, value];
         } else {
-          amenities = _.pull(prevState.filters.amenities, target.value);
+          amenities = _.pull(prevState.filters.amenities, value);
         }
         return {
           ...prevState,
@@ -39,6 +53,13 @@ export class Filters extends React.Component {
       }
     );
   };
+
+  /**
+   * Handle Chaning the rating filter
+   * @param {number} rate The rating number
+   * @param {Context} context React Context
+   * @returns {Void}
+   */
   handleChoose = (rate, context) => {
     const { filters } = this.state;
     filters['rating'] = rate;

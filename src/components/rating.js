@@ -1,6 +1,16 @@
 import React from 'react';
 import { SVGIcon } from '.';
+import PropTypes from 'prop-types';
 
+/**
+ *
+ * Get stars HTML depends on the inputs
+ * @param {Object} props Rating object info (max, rate, height, color, handleClick)
+ * @param {number} props.max Maximum numbers of stars to have
+ * @param {number} props.rate The rating
+ * @param {string} props.color Color of the stars
+ * @param {func} props.handleClick Color of the stars
+ */
 export const Rating = props => {
   let arr = [];
   for (let i = 0; i < props.max; i++) {
@@ -24,7 +34,13 @@ export const Rating = props => {
 Rating.defaultProps = {
   max: 5,
   rate: 2.5,
-  height: 8,
   color: '#F4A11E',
   handleClick: () => false
+};
+
+Rating.propTypes = {
+  max: PropTypes.number,
+  rate: PropTypes.number,
+  color: PropTypes.string,
+  handleClick: PropTypes.func
 };

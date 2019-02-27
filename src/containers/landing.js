@@ -11,12 +11,20 @@ export class Landing extends React.Component {
     hotels: [],
     loading: true,
     ...DEFAULT_FILTERS_CONTEXT,
+
+    /**
+     * @param {Object} state The new state to set
+     * @returns {Void}
+     */
     update: state => {
       this.setState(state);
     }
   };
 
   componentDidMount() {
+    /**
+     * Get all available hotels and set their data to state
+     */
     axios.get(`http://localhost:4000/hotels`).then(res => {
       this.setState({
         hotels: res.data,
@@ -25,6 +33,10 @@ export class Landing extends React.Component {
     });
   }
 
+  /**
+   * Filter hotel depending on the filter criteria
+   * @returns {Array} Filtered hotels list
+   */
   filteredHotels() {
     const { price_category, distance_to_venue, amenities, rating } = this.state.filters;
 

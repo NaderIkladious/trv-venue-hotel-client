@@ -12,29 +12,49 @@ export class Hotel extends React.Component {
     hotel: {},
     rooms: []
   };
+
   componentDidMount() {
     const { id } = this.props.match.params;
+    /**
+     * Get hotel by ID and set it to state
+     */
     axios.get(`http://localhost:4000/hotels/${id}`).then(res => {
       this.setState({
         hotel: res.data,
         loading: false
       });
     });
+
+    /**
+     * Get rooms for specific hotel using hotel ID
+     */
     axios.get(`http://localhost:4000/rooms?hotel_id=${id}`).then(res => {
       this.setState({
         rooms: res.data
       });
     });
   }
+
+  /**
+   * Sort rooms using the price field ASC
+   * Also load 2 as initial
+   * @returns {Array} Array or room objects
+   */
   rooms = () => {
     const { rooms } = this.state;
     let result = _.orderBy(rooms, 'price_in_usd');
     result = this.state.sample ? _.take(result, 2) : result;
     return result;
   };
+
+  /**
+   * Setting sample flag to false to load the remaining rooms
+   * @returns {Void}
+   */
   loadMore = () => {
     this.setState({ sample: false });
   };
+
   render() {
     const { hotel, rooms, sample } = this.state;
     return (

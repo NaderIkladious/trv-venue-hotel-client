@@ -11,6 +11,9 @@ export default class AdminHotels extends React.Component {
   };
 
   componentDidMount() {
+    /**
+     * Get request to fetch all hotels
+     */
     axios.get(`http://localhost:4000/hotels`).then(res => {
       this.setState({
         hotels: res.data,
@@ -18,6 +21,13 @@ export default class AdminHotels extends React.Component {
       });
     });
   }
+
+  /**
+   * Removing hotel by ID
+   * DELETE api call to remove the hotel
+   * @param {string} hotelId The hotel ID
+   * @returns {Void}
+   */
   removeHotel = hotelId => {
     axios.delete(`http://localhost:4000/hotels/${hotelId}`).then(() => {
       let { hotels } = this.state;
@@ -25,6 +35,7 @@ export default class AdminHotels extends React.Component {
       this.setState(hotels);
     });
   };
+
   render() {
     return (
       <div className="admin-hotels">

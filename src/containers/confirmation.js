@@ -8,12 +8,15 @@ export class Confirmation extends React.Component {
     confirmation: {}
   };
   componentDidMount() {
+    // Get confirmation ID from the url
     const confirmationId = this.props.match.params.id;
     if (this.props.location && this.props.location.state && this.props.location.state.room) {
       const { room, hotel } = this.props.location.state;
       if (_.has(localStorage, confirmationId)) {
+        // If confirmation ID exists in the local storage set it to state
         this.setState({ confirmation: JSON.parse(localStorage[confirmationId]) });
       } else {
+        // Otherwise create new confirmation with API POST with details
         const confirmation = {
           id: confirmationId,
           roomName: room.name,

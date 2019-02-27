@@ -1,9 +1,10 @@
 import React from 'react';
 import { ICONS } from '../icons';
+import PropTypes from 'prop-types';
 
 /**
  * Render SVG Icons
- * @param {object} props Object with SVG info
+ * @returns {string} SVG HTML elemt
  */
 export const SVGIcon = props => {
   const icon = ICONS[props.name] || ICONS['CIRCLE'];
@@ -30,6 +31,21 @@ SVGIcon.defaultProps = {
   className: ''
 };
 
+SVGIcon.propTypes = {
+  name: PropTypes.string.isRequired,
+  style: PropTypes.object,
+  fill: PropTypes.string,
+  viewBox: PropTypes.string,
+  width: PropTypes.string,
+  className: PropTypes.string
+};
+
+/**
+ * Rendering an Icon with text next to it
+ * @param {string} obj.text Text to be shown after icon
+ * @param {string} obj.className class name to be added on the icon and text wrapper
+ * @returns {string} HTML for the component
+ */
 export const SVGIconText = ({ text, className = '', ...props }) => {
   return (
     <div className={className}>
