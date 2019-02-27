@@ -6,6 +6,8 @@ import Carousel from 'nuka-carousel';
 
 import { Img } from '..';
 
+import './style.css';
+
 /**
  * Room item card
  * @returns {string} Room Item HTML component

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './footer.css';
+
 /**
  * The footer
  * @returns {string} Footer HTML component

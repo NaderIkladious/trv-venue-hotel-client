@@ -1,7 +1,10 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
+
 import AdminHotels from './hotels/';
 import NewHotel from './new-hotel/';
+
+import './style.css';
 
 export class Admin extends React.Component {
   render() {

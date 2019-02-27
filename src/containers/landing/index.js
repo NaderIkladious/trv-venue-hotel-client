@@ -1,8 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import _ from 'lodash';
+
 import { HotelItem, Filters, Spinner } from '../../components';
 import { DEFAULT_FILTERS_CONTEXT } from '../../core/consts';
+
+import './style.css';
 
 export const LandingContext = React.createContext(DEFAULT_FILTERS_CONTEXT);
 

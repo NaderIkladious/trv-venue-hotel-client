@@ -4,6 +4,8 @@ import _ from 'lodash';
 
 import { Spinner, SVGIcon } from '../../../components';
 
+import './style.css';
+
 export default class AdminHotels extends React.Component {
   state = {
     hotels: [],

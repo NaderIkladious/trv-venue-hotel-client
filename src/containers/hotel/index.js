@@ -3,7 +3,10 @@ import axios from 'axios';
 import Carousel from 'nuka-carousel';
 import { Helmet } from 'react-helmet';
 import _ from 'lodash';
+
 import { Rating, Img, SVGIconText, Room, Spinner } from '../../components';
+
+import './style.css';
 
 export class Hotel extends React.Component {
   state = {

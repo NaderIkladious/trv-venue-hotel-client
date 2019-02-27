@@ -3,6 +3,8 @@ import _ from 'lodash';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 
+import './style.css';
+
 export class Confirmation extends React.Component {
   state = {
     confirmation: {}

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './spinner.css';
+
 /**
  * Loading spinner with animation
  * @returns {string} Spinner HTML component
