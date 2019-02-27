@@ -1,5 +1,5 @@
 import React from 'react';
-import { SVGIcon } from '.';
+import { SVGIcon } from '..';
 import PropTypes from 'prop-types';
 
 /**

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ICONS } from '../icons';
+import { ICONS } from './icons';
 import PropTypes from 'prop-types';
 
 /**
@@ -38,19 +38,4 @@ SVGIcon.propTypes = {
   viewBox: PropTypes.string,
   width: PropTypes.string,
   className: PropTypes.string
-};
-
-/**
- * Rendering an Icon with text next to it
- * @param {string} obj.text Text to be shown after icon
- * @param {string} obj.className class name to be added on the icon and text wrapper
- * @returns {string} HTML for the component
- */
-export const SVGIconText = ({ text, className = '', ...props }) => {
-  return (
-    <div className={className}>
-      <SVGIcon {...props} />
-      <span className="mx-1">{text}</span>
-    </div>
-  );
 };

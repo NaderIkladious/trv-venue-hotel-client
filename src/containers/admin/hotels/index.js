@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import _ from 'lodash';
 
-import { Spinner, SVGIcon } from '../../components';
+import { Spinner, SVGIcon } from '../../../components';
 
 export default class AdminHotels extends React.Component {
   state = {
@@ -48,7 +48,7 @@ export default class AdminHotels extends React.Component {
             {this.state.hotels.map(hotel => (
               <li key={hotel.id}>
                 <h4>{hotel.name}</h4>
-                <div class="hotel-remove" onClick={e => this.removeHotel(hotel.id)}>
+                <div className="hotel-remove" onClick={e => this.removeHotel(hotel.id)}>
                   <SVGIcon name="TRASH" width="24" fill="#d93732" />
                 </div>
               </li>

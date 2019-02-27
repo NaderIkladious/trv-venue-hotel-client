@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import axios from 'axios';
 
-import { AMENITIES } from '../../core/consts';
+import { AMENITIES } from '../../../core/consts';
 
 export default class NewHotel extends React.Component {
   state = {

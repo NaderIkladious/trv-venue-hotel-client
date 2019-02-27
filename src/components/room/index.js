@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import uuidv4 from 'uuid';
 import Carousel from 'nuka-carousel';
-import { Img } from '.';
+
+import { Img } from '..';
 
 /**
  * Room item card

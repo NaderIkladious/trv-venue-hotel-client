@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
-import { Rating, Img, SVGIconText } from '.';
+import { Rating, Img, SVGIconText } from '..';
 
 /**
  * Hotel item card
