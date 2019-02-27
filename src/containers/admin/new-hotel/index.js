@@ -34,7 +34,7 @@ export default class NewHotel extends React.Component {
   handleChange = e => {
     const { state } = this;
     const { name, value } = e.target;
-    state[name] = isNaN(parseFloat(value)) ? Number(value) : value;
+    state[name] = !isNaN(parseFloat(value)) ? Number(value) : value;
     this.setState({ ...state });
   };
 

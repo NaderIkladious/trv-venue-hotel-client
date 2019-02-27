@@ -429,6 +429,16 @@ button,
     .button.button-green:hover {
       background-color: #1eaf58; }
 
+.no-result {
+  padding: 120px 10%;
+  text-align: center;
+  margin: 0 0 50px 0;
+  font-size: 34px;
+  background: #f5f2f2;
+  border-radius: 4px; }
+  .no-result p {
+    margin: 0; }
+
 @font-face {
   font-family: 'Muli';
   src: url("../fonts/muli/muli.woff2") format("woff2"), url("../fonts/muli/muli.woff") format("woff");

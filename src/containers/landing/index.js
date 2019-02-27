@@ -52,6 +52,7 @@ export class Landing extends React.Component {
   }
 
   render() {
+    const hotels = this.filteredHotels();
     return (
       <LandingContext.Provider value={this.state}>
         <div className="landing">
@@ -63,13 +64,21 @@ export class Landing extends React.Component {
                 {this.state.loading ? (
                   <Spinner />
                 ) : (
-                  <ul>
-                    {this.filteredHotels().map(hotel => (
-                      <li key={hotel.id}>
-                        <HotelItem hotel={hotel} />
-                      </li>
-                    ))}
-                  </ul>
+                  <div>
+                    {hotels.length ? (
+                      <ul>
+                        {hotels.map(hotel => (
+                          <li key={hotel.id}>
+                            <HotelItem hotel={hotel} />
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <div className="no-result">
+                        <p>No result were found for the selected criteria.</p>
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
             </div>

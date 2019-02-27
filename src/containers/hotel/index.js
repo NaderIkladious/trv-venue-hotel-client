@@ -56,7 +56,8 @@ export class Hotel extends React.Component {
   };
 
   render() {
-    const { hotel, rooms, sample } = this.state;
+    const { hotel, sample, loading } = this.state;
+    const rooms = this.rooms();
     return (
       <div className="hotel-page">
         <Helmet>
@@ -101,26 +102,32 @@ export class Hotel extends React.Component {
             <h4>Description</h4>
             <p>{hotel.description}</p>
             <div className="hotel-page-rooms">
-              {rooms ? (
-                <ul className="room-list">
-                  {this.rooms().map(room => (
-                    <li key={room.id}>
-                      <Room room={room} hotel={hotel} />
-                    </li>
-                  ))}
-                </ul>
-              ) : (
+              {loading ? (
                 <Spinner />
+              ) : (
+                <div>
+                  {rooms.length ? (
+                    <ul className="room-list">
+                      {rooms.map(room => (
+                        <li key={room.id}>
+                          <Room room={room} hotel={hotel} />
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <div className="no-result">
+                      <p>There are no rooms found for this hotel at the moment.</p>
+                    </div>
+                  )}
+                </div>
               )}
             </div>
-            {sample ? (
+            {!loading && rooms.length > 0 && sample && (
               <div className="load-more">
                 <span className="button" onClick={this.loadMore}>
                   Load More
                 </span>
               </div>
-            ) : (
-              ''
             )}
           </div>
         </div>
