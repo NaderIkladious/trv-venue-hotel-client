@@ -22,13 +22,11 @@
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "PORT=4001 react-scripts start",
     "dev": "npm-run-all -p watch-css start-js",
-    "start": "npm-run-all start-js",
-    "heroku-postbuild": "npm-run-all start-js",
-    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "build": "npm-run-all build-css && react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
   }
