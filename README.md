@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+The deployed version can be found on https://trv-venue-hotel-client.herokuapp.com/
+
 Below you will find some information on how to perform common tasks.<br>
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)

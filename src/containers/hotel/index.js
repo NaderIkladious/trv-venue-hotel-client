@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import _ from 'lodash';
 
 import { Rating, Img, SVGIconText, Room, Spinner } from '../../components';
+import { API_URL } from '../../core/consts';
 
 import './style.css';
 
@@ -21,7 +22,7 @@ export class Hotel extends React.Component {
     /**
      * Get hotel by ID and set it to state
      */
-    axios.get(`http://localhost:4000/hotels/${id}`).then(res => {
+    axios.get(`${API_URL}/hotels/${id}`).then(res => {
       this.setState({
         hotel: res.data,
         loading: false
@@ -31,7 +32,7 @@ export class Hotel extends React.Component {
     /**
      * Get rooms for specific hotel using hotel ID
      */
-    axios.get(`http://localhost:4000/rooms?hotel_id=${id}`).then(res => {
+    axios.get(`${API_URL}/rooms?hotel_id=${id}`).then(res => {
       this.setState({
         rooms: res.data
       });

@@ -3,6 +3,7 @@ import axios from 'axios';
 import _ from 'lodash';
 
 import { Spinner, SVGIcon } from '../../../components';
+import { API_URL } from '../../../core/consts';
 
 import './style.css';
 
@@ -16,7 +17,7 @@ export default class AdminHotels extends React.Component {
     /**
      * Get request to fetch all hotels
      */
-    axios.get(`http://localhost:4000/hotels`).then(res => {
+    axios.get(`${API_URL}/hotels`).then(res => {
       this.setState({
         hotels: res.data,
         loading: false
@@ -31,7 +32,7 @@ export default class AdminHotels extends React.Component {
    * @returns {Void}
    */
   removeHotel = hotelId => {
-    axios.delete(`http://localhost:4000/hotels/${hotelId}`).then(() => {
+    axios.delete(`${API_URL}/hotels/${hotelId}`).then(() => {
       let { hotels } = this.state;
       _.remove(hotels, hotel => hotel.id === hotelId);
       this.setState(hotels);

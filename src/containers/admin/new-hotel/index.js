@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import axios from 'axios';
 
-import { AMENITIES } from '../../../core/consts';
+import { AMENITIES, API_URL } from '../../../core/consts';
 
 export default class NewHotel extends React.Component {
   state = {
@@ -21,7 +21,7 @@ export default class NewHotel extends React.Component {
    */
   handleSubmit = e => {
     e.preventDefault();
-    axios.post('http://localhost:4000/hotels', this.state).then(res => {
+    axios.post(`${API_URL}/hotels`, this.state).then(res => {
       this.props.history.push('/admin');
     });
   };

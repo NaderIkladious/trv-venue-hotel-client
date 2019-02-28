@@ -3,6 +3,8 @@ import _ from 'lodash';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 
+import { API_URL } from '../../core/consts';
+
 import './style.css';
 
 export class Confirmation extends React.Component {
@@ -30,7 +32,7 @@ export class Confirmation extends React.Component {
         };
         localStorage.setItem(confirmationId, JSON.stringify(confirmation));
         this.setState({ confirmation });
-        axios.post('http://localhost:4000/confirmations', confirmation).then(res => {
+        axios.post(`${API_URL}/confirmations`, confirmation).then(res => {
           console.log('posting data', res);
         });
       }
@@ -38,7 +40,7 @@ export class Confirmation extends React.Component {
       if (_.has(localStorage, confirmationId)) {
         this.setState({ confirmation: JSON.parse(localStorage[confirmationId]) });
       } else {
-        axios.get(`http://localhost:3000/confirmations/${confirmationId}`).then(res => {
+        axios.get(`${API_URL}/confirmations/${confirmationId}`).then(res => {
           console.log('getting data', res);
           this.setState({ confirmation: res.data });
         });

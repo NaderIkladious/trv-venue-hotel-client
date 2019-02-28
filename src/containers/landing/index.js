@@ -3,7 +3,7 @@ import axios from 'axios';
 import _ from 'lodash';
 
 import { HotelItem, Filters, Spinner } from '../../components';
-import { DEFAULT_FILTERS_CONTEXT } from '../../core/consts';
+import { DEFAULT_FILTERS_CONTEXT, API_URL } from '../../core/consts';
 
 import './style.css';
 
@@ -28,7 +28,7 @@ export class Landing extends React.Component {
     /**
      * Get all available hotels and set their data to state
      */
-    axios.get(`http://localhost:4000/hotels`).then(res => {
+    axios.get(`${API_URL}/hotels`).then(res => {
       this.setState({
         hotels: res.data,
         loading: false
